@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://tj0amyv62q0j"]
+
+[ext_resource type="Texture2D" uid="uid://beg0nhxvppc1j" path="res://assets/Baguette-Background_Main-mENU.png" id="1_klthi"]
+
+[node name="BackGround Image" type="TextureRect" unique_id=39606813]
+offset_right = 60.0
+offset_bottom = 45.0
+texture = ExtResource("1_klthi")

@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="BaguetteWare"
+run/main_scene="uid://hsr30tgqcbrl"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
