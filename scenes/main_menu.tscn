@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bakr6hve7avrm" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="PackedScene" uid="uid://tj0amyv62q0j" path="res://scenes/back_ground_image.tscn" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://ded2xccd5pybh" path="res://assets/bread_transparent.png" id="3_bqqt6"]
 
 [node name="MAIN-MENU" type="Node2D" unique_id=1126474852]
 script = ExtResource("1_ekxnf")
@@ -10,6 +11,10 @@ script = ExtResource("1_ekxnf")
 offset_right = 1152.0
 offset_bottom = 648.0
 expand_mode = 1
+
+[node name="BreadTransparent" type="Sprite2D" parent="." unique_id=581843935]
+position = Vector2(249, 181)
+texture = ExtResource("3_bqqt6")
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=2018570783]
 clip_contents = false
@@ -22,14 +27,11 @@ theme_override_font_sizes/normal_font_size = 79
 text = "BAGUETTE WARE"
 scroll_active = false
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1088108764]
-position = Vector2(576, 324)
-
 [node name="Buttons" type="VBoxContainer" parent="." unique_id=1971589265]
-offset_left = 454.0
-offset_top = 291.0
-offset_right = 707.0
-offset_bottom = 576.0
+offset_left = 456.0
+offset_top = 318.0
+offset_right = 709.0
+offset_bottom = 603.0
 
 [node name="Start Game" type="Button" parent="Buttons" unique_id=603383542]
 layout_mode = 2

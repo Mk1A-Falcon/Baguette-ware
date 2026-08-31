@@ -1,3 +1,57 @@
 [gd_scene format=3 uid="uid://4osqgiwcrm5b"]
 
+[ext_resource type="Texture2D" uid="uid://bsslw45fm7i2k" path="res://assets/Baguette-Background_Main-mENU-orange.png" id="1_6bjtl"]
+[ext_resource type="Texture2D" uid="uid://ded2xccd5pybh" path="res://assets/bread_transparent.png" id="2_a756s"]
+
 [node name="level_scence" type="Node2D" unique_id=1335226446]
+
+[node name="Background" type="TextureRect" parent="." unique_id=1399708455]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_6bjtl")
+expand_mode = 1
+
+[node name="BaguetteContainer" type="HBoxContainer" parent="." unique_id=650866828]
+offset_left = 83.0
+offset_top = 369.99997
+offset_right = 2099.0
+offset_bottom = 690.0
+scale = Vector2(0.48000276, 0.6)
+
+[node name="Baguette1" type="TextureRect" parent="BaguetteContainer" unique_id=498171403]
+layout_mode = 2
+texture = ExtResource("2_a756s")
+
+[node name="Baguette2" type="TextureRect" parent="BaguetteContainer" unique_id=1067328639]
+layout_mode = 2
+texture = ExtResource("2_a756s")
+
+[node name="Baguette3" type="TextureRect" parent="BaguetteContainer" unique_id=90648855]
+layout_mode = 2
+texture = ExtResource("2_a756s")
+
+[node name="Baguette4" type="TextureRect" parent="BaguetteContainer" unique_id=1792922144]
+layout_mode = 2
+texture = ExtResource("2_a756s")
+
+[node name="Baguette5" type="TextureRect" parent="BaguetteContainer" unique_id=491007275]
+layout_mode = 2
+texture = ExtResource("2_a756s")
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=2127853131]
+offset_left = 480.0
+offset_top = 105.0
+offset_right = 702.0
+offset_bottom = 172.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "LEVEL #"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=1660390184]
+offset_left = 522.0
+offset_top = 225.0
+offset_right = 654.0
+offset_bottom = 290.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"
