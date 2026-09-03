@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://chwy4jgf85unw"]
+
+[ext_resource type="Script" uid="uid://dt0xgfxlrrljh" path="res://scripts/Timer_ingame.gd" id="1_rtle5"]
+
+[node name="RichTextLabel" type="RichTextLabel" unique_id=1661251451]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_rtle5")

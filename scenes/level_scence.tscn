@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://4osqgiwcrm5b"]
 
 [ext_resource type="Texture2D" uid="uid://bsslw45fm7i2k" path="res://assets/Baguette-Background_Main-mENU-orange.png" id="1_6bjtl"]
+[ext_resource type="Script" uid="uid://ddu8uw1fkn1iq" path="res://scripts/timer_screen.gd" id="1_eo0fr"]
 [ext_resource type="Texture2D" uid="uid://ded2xccd5pybh" path="res://assets/bread_transparent.png" id="2_a756s"]
 
 [node name="level_scence" type="Node2D" unique_id=1335226446]
+script = ExtResource("1_eo0fr")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1399708455]
 offset_right = 1152.0

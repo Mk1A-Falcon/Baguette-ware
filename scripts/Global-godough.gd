@@ -1,7 +1,7 @@
 extends Node
 
 var baguettes_played = 0
-var runs_left = 10
+var runs_left = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
