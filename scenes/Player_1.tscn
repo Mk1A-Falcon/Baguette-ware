@@ -71,7 +71,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"run",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8fhpc"]
@@ -84,6 +84,7 @@ script = ExtResource("1_r43v2")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1967003881]
 sprite_frames = SubResource("SpriteFrames_neh28")
 animation = &"run"
+autoplay = "run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=494945174]
 position = Vector2(0, 5)

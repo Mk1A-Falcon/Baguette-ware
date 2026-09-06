@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://5h61jygbltjw"]
+
+[ext_resource type="PackedScene" uid="uid://tj0amyv62q0j" path="res://scenes/back_ground_image.tscn" id="1_og05i"]
+[ext_resource type="PackedScene" uid="uid://bxh2chvh1wk3y" path="res://scenes/Player_1.tscn" id="2_og05i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjqgx"]
+size = Vector2(40.162727, 40)
+
+[node name="minigame_1" type="Node2D" unique_id=61975540]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=968843133]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(10, 0)
+
+[node name="BackGround Image" parent="Parallax2D" unique_id=39606813 instance=ExtResource("1_og05i")]
+offset_right = 1152.0
+offset_bottom = 648.0
+expand_mode = 1
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1388904422]
+position = Vector2(25, 523)
+scale = Vector2(13.519999, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Ground" unique_id=2105585050]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 0.6117647, 0.39215687, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=65554830]
+position = Vector2(20.081364, 20)
+shape = SubResource("RectangleShape2D_bjqgx")
+
+[node name="Player" parent="." unique_id=1974290458 instance=ExtResource("2_og05i")]
+position = Vector2(116, 468)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1639184962]
+position = Vector2(226, 433)
+zoom = Vector2(3, 3)
