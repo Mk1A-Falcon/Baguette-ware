@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bakr6hve7avrm" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="PackedScene" uid="uid://tj0amyv62q0j" path="res://scenes/back_ground_image.tscn" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://ded2xccd5pybh" path="res://assets/bread_transparent.png" id="3_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://dsbmkedqn76rd" path="res://assets/stardance_logo_transparent.png" id="4_wu84c"]
 
 [node name="MAIN-MENU" type="Node2D" unique_id=1126474852]
 script = ExtResource("1_ekxnf")
@@ -51,6 +52,11 @@ theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 28
 text = "QUIT
 "
+
+[node name="StardanceLogoTransparent" type="Sprite2D" parent="." unique_id=1055748554]
+position = Vector2(1088, 62)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_wu84c")
 
 [connection signal="pressed" from="Buttons/Start Game" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="Buttons/QUIT" to="." method="_on_quit_pressed"]
