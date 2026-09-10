@@ -1,5 +1,5 @@
 extends Node2D
-@onready var timer: RichTextLabel = $timer
+@onready var timer: RichTextLabel = $RichTextLabel
 
 var time : float
 func _ready() -> void:
@@ -8,7 +8,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	timer.text = str(snapped(time, 0.10)) 
 
-func Timer(start_time: float): 
+func TIMERWORKSBROTRUST (start_time: float): 
 	time = start_time
 	
 	while time > 0.0: 

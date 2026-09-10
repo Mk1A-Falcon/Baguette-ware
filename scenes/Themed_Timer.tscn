@@ -2,9 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dt0xgfxlrrljh" path="res://scripts/Timer_ingame.gd" id="1_wn5cd"]
 
-[node name="themed_timer" type="Node2D" unique_id=60012286]
+[node name="Node2d" type="Node2D" unique_id=60012286]
 script = ExtResource("1_wn5cd")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1720270958]
+clip_contents = false
 offset_right = 40.0
 offset_bottom = 40.0
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/normal_font_size = 48

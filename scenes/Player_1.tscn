@@ -86,6 +86,12 @@ sprite_frames = SubResource("SpriteFrames_neh28")
 animation = &"run"
 autoplay = "run"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=494945174]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1942552432]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_8fhpc")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1970196209]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=494945174]
 position = Vector2(0, 5)
 shape = SubResource("CapsuleShape2D_8fhpc")

@@ -1,11 +1,11 @@
 extends Node2D
-@onready var themed_timer: Node2D = $"."
+@onready var node_2d: Node2D = $"tIMER"
 
 var baguettes_connected = 0 
 var timer_end = false
 
 func _ready() -> void:
-	await themed_timer.Timer(10.0)
+	await node_2d.TIMERWORKSBROTRUST(10.0)
 	timer_end = true
 
 func _process(delta: float) -> void:

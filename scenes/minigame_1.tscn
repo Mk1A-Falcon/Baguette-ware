@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bxh2chvh1wk3y" path="res://scenes/Player_1.tscn" id="2_og05i"]
 [ext_resource type="Script" uid="uid://bvcpp2m75df7t" path="res://scripts/pickups.gd" id="4_fa05o"]
 [ext_resource type="Texture2D" uid="uid://ded2xccd5pybh" path="res://assets/bread_transparent.png" id="4_v5ebm"]
+[ext_resource type="PackedScene" uid="uid://bbfuaoee7odcl" path="res://scenes/Themed_Timer.tscn" id="7_vc5od"]
 
 [sub_resource type="Animation" id="Animation_fa05o"]
 length = 0.001
@@ -104,3 +105,6 @@ autoplay = &"up"
 position = Vector2(16, 20.853699)
 scale = Vector2(1.7999988, 1.6800001)
 shape = SubResource("CircleShape2D_bjqgx")
+
+[node name="tIMER" parent="." unique_id=60012286 instance=ExtResource("7_vc5od")]
+position = Vector2(65, 330)

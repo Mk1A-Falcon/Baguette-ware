@@ -2,7 +2,8 @@ extends Node2D
 
 @onready var player: CharacterBody2D = $"../Player"
 @onready var area_2d: Area2D = $Area2D
-@onready var player_area: CollisionShape2D = $CollisionShape2D
+@onready var player_area: Area2D = $"../Player/Area2D"
+
 
 signal baguettes_connected
 func _physics_process(delta: float) -> void:
