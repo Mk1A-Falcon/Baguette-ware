@@ -83,11 +83,11 @@ scale = Vector2(4.199998, 0.40000126)
 position = Vector2(59, 421)
 scale = Vector2(3.7199974, 0.39999998)
 
-[node name="pickups" type="Node2D" parent="." unique_id=268513017]
+[node name="baguette1" type="Node2D" parent="." unique_id=268513017]
 position = Vector2(127, 371)
 script = ExtResource("4_fa05o")
 
-[node name="ImageofBaguette" type="TextureRect" parent="pickups" unique_id=1426353540]
+[node name="ImageofBaguette" type="TextureRect" parent="baguette1" unique_id=1426353540]
 offset_left = -2.0
 offset_top = 1.0
 offset_right = 38.0
@@ -95,13 +95,61 @@ offset_bottom = 41.0
 texture = ExtResource("4_v5ebm")
 expand_mode = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="pickups" unique_id=651808627]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="baguette1" unique_id=651808627]
 libraries/ = SubResource("AnimationLibrary_fa05o")
 autoplay = &"up"
 
-[node name="Area2D" type="Area2D" parent="pickups" unique_id=1747868677]
+[node name="Area2D" type="Area2D" parent="baguette1" unique_id=1747868677]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="pickups/Area2D" unique_id=1418747268]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="baguette1/Area2D" unique_id=1418747268]
+position = Vector2(16, 20.853699)
+scale = Vector2(1.7999988, 1.6800001)
+shape = SubResource("CircleShape2D_bjqgx")
+
+[node name="baguette2" type="Node2D" parent="." unique_id=77474689]
+position = Vector2(127, 371)
+script = ExtResource("4_fa05o")
+
+[node name="ImageofBaguette" type="TextureRect" parent="baguette2" unique_id=258873526]
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 38.0
+offset_bottom = 41.0
+texture = ExtResource("4_v5ebm")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="baguette2/ImageofBaguette" unique_id=215533793]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_fa05o")
+autoplay = &"up"
+
+[node name="Area2D" type="Area2D" parent="baguette2" unique_id=279816609]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="baguette2/Area2D" unique_id=1155336086]
+position = Vector2(16, 20.853699)
+scale = Vector2(1.7999988, 1.6800001)
+shape = SubResource("CircleShape2D_bjqgx")
+
+[node name="baguette3" type="Node2D" parent="." unique_id=188334156]
+position = Vector2(127, 371)
+script = ExtResource("4_fa05o")
+
+[node name="ImageofBaguette" type="TextureRect" parent="baguette3" unique_id=145625603]
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 38.0
+offset_bottom = 41.0
+texture = ExtResource("4_v5ebm")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="baguette3/ImageofBaguette" unique_id=1580006050]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_fa05o")
+autoplay = &"up"
+
+[node name="Area2D" type="Area2D" parent="baguette3" unique_id=1397057926]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="baguette3/Area2D" unique_id=1747758067]
 position = Vector2(16, 20.853699)
 scale = Vector2(1.7999988, 1.6800001)
 shape = SubResource("CircleShape2D_bjqgx")
