@@ -4,48 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://tj0amyv62q0j" path="res://scenes/back_ground_image.tscn" id="1_og05i"]
 [ext_resource type="PackedScene" uid="uid://clnkjq1xxpa8g" path="res://scenes/ground.tscn" id="2_lmjug"]
 [ext_resource type="PackedScene" uid="uid://bxh2chvh1wk3y" path="res://scenes/Player_1.tscn" id="2_og05i"]
-[ext_resource type="Script" uid="uid://bvcpp2m75df7t" path="res://scripts/pickups.gd" id="4_fa05o"]
-[ext_resource type="Texture2D" uid="uid://ded2xccd5pybh" path="res://assets/bread_transparent.png" id="4_v5ebm"]
+[ext_resource type="PackedScene" uid="uid://dl5kmghpewba" path="res://scenes/pickup.tscn" id="6_j1cg4"]
 [ext_resource type="PackedScene" uid="uid://bbfuaoee7odcl" path="res://scenes/Themed_Timer.tscn" id="7_vc5od"]
-
-[sub_resource type="Animation" id="Animation_fa05o"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(127, 371)]
-}
-
-[sub_resource type="Animation" id="Animation_v5ebm"]
-resource_name = "up"
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(127, 371), Vector2(127, 355)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fa05o"]
-_data = {
-&"RESET": SubResource("Animation_fa05o"),
-&"up": SubResource("Animation_v5ebm")
-}
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_bjqgx"]
 
 [node name="minigame_1" type="Node2D" unique_id=61975540]
 script = ExtResource("1_j1cg4")
@@ -69,6 +29,9 @@ position = Vector2(116, 468)
 position = Vector2(245, 418)
 zoom = Vector2(2.8, 2.8)
 
+[node name="baguette_pickup" parent="." unique_id=2106915881 instance=ExtResource("6_j1cg4")]
+position = Vector2(339, 346)
+
 [node name="platforms" type="Node2D" parent="." unique_id=1273684306]
 
 [node name="platform_1" parent="platforms" unique_id=901511771 instance=ExtResource("2_lmjug")]
@@ -83,76 +46,11 @@ scale = Vector2(4.199998, 0.40000126)
 position = Vector2(59, 421)
 scale = Vector2(3.7199974, 0.39999998)
 
-[node name="baguette1" type="Node2D" parent="." unique_id=268513017]
-position = Vector2(127, 371)
-script = ExtResource("4_fa05o")
-
-[node name="ImageofBaguette" type="TextureRect" parent="baguette1" unique_id=1426353540]
-offset_left = -2.0
-offset_top = 1.0
-offset_right = 38.0
-offset_bottom = 41.0
-texture = ExtResource("4_v5ebm")
-expand_mode = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="baguette1" unique_id=651808627]
-libraries/ = SubResource("AnimationLibrary_fa05o")
-autoplay = &"up"
-
-[node name="Area2D" type="Area2D" parent="baguette1" unique_id=1747868677]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="baguette1/Area2D" unique_id=1418747268]
-position = Vector2(16, 20.853699)
-scale = Vector2(1.7999988, 1.6800001)
-shape = SubResource("CircleShape2D_bjqgx")
-
-[node name="baguette2" type="Node2D" parent="." unique_id=77474689]
-position = Vector2(127, 371)
-script = ExtResource("4_fa05o")
-
-[node name="ImageofBaguette" type="TextureRect" parent="baguette2" unique_id=258873526]
-offset_left = -2.0
-offset_top = 1.0
-offset_right = 38.0
-offset_bottom = 41.0
-texture = ExtResource("4_v5ebm")
-expand_mode = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="baguette2/ImageofBaguette" unique_id=215533793]
-root_node = NodePath("../..")
-libraries/ = SubResource("AnimationLibrary_fa05o")
-autoplay = &"up"
-
-[node name="Area2D" type="Area2D" parent="baguette2" unique_id=279816609]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="baguette2/Area2D" unique_id=1155336086]
-position = Vector2(16, 20.853699)
-scale = Vector2(1.7999988, 1.6800001)
-shape = SubResource("CircleShape2D_bjqgx")
-
-[node name="baguette3" type="Node2D" parent="." unique_id=188334156]
-position = Vector2(127, 371)
-script = ExtResource("4_fa05o")
-
-[node name="ImageofBaguette" type="TextureRect" parent="baguette3" unique_id=145625603]
-offset_left = -2.0
-offset_top = 1.0
-offset_right = 38.0
-offset_bottom = 41.0
-texture = ExtResource("4_v5ebm")
-expand_mode = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="baguette3/ImageofBaguette" unique_id=1580006050]
-root_node = NodePath("../..")
-libraries/ = SubResource("AnimationLibrary_fa05o")
-autoplay = &"up"
-
-[node name="Area2D" type="Area2D" parent="baguette3" unique_id=1397057926]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="baguette3/Area2D" unique_id=1747758067]
-position = Vector2(16, 20.853699)
-scale = Vector2(1.7999988, 1.6800001)
-shape = SubResource("CircleShape2D_bjqgx")
-
 [node name="tIMER" parent="." unique_id=60012286 instance=ExtResource("7_vc5od")]
 position = Vector2(65, 330)
+
+[node name="baguette_pickup2" parent="." unique_id=77932834 instance=ExtResource("6_j1cg4")]
+position = Vector2(112, 371)
+
+[node name="baguette_pickup3" parent="." unique_id=2070213588 instance=ExtResource("6_j1cg4")]
+position = Vector2(306, 420)

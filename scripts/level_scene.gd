@@ -18,7 +18,7 @@ func _ready() -> void:
 	else:
 		get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	match GlobalGodough.runs_left: 
 
 		4:
