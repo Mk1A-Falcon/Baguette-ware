@@ -2,7 +2,7 @@
 A Marioware Based Web-Playable game on "Baguettes"
 All games are based on a ingame timer(themed_timer.tscn and level_scene's inbuilt timer function) Complete all challenged in the given time to win!
 ## To play-
-Click on <link href="https://mk1a.itch.io/baguette-ware">this link</link> and click "run game" to play
+Click on [this link](https://mk1a.itch.io/baguette-ware) and click "run game" to play
 Additionally check out the "fullscreen" button on the bottom right of the playable window*
 <img src="display_readme\image.png">
 
