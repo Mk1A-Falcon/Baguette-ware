@@ -11,3 +11,5 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme_override_constants/outline_size = 8
 theme_override_font_sizes/normal_font_size = 48
+scroll_active = false
+autowrap_mode = 0

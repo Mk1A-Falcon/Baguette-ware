@@ -47,10 +47,13 @@ position = Vector2(59, 421)
 scale = Vector2(3.7199974, 0.39999998)
 
 [node name="tIMER" parent="." unique_id=60012286 instance=ExtResource("7_vc5od")]
-position = Vector2(65, 330)
+position = Vector2(52, 302)
 
 [node name="baguette_pickup2" parent="." unique_id=77932834 instance=ExtResource("6_j1cg4")]
 position = Vector2(112, 371)
 
 [node name="baguette_pickup3" parent="." unique_id=2070213588 instance=ExtResource("6_j1cg4")]
 position = Vector2(306, 420)
+
+[node name="baguette_pickup4" parent="." unique_id=317160804 instance=ExtResource("6_j1cg4")]
+position = Vector2(299, 485)

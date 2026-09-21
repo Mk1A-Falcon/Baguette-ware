@@ -12,7 +12,7 @@ var time
 func _ready() -> void:
 	await Timer(5.0)
 	
-	if GlobalGodough.baguettes_played < 3:
+	if GlobalGodough.baguettes_played < 2:
 		GlobalGodough.baguettes_played = GlobalGodough.baguettes_played + 1
 		get_tree().change_scene_to_file("res://scenes/minigame_" + str(GlobalGodough.baguettes_played) + ".tscn")
 	else:
