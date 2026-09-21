@@ -2,6 +2,7 @@ extends Node2D
 
 #same as :win_gane.tscn" almost wrote it as if it was a slack emoji :|
 func _on_menu_pressed() -> void:
+	GlobalGodough.stat_reset()
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 

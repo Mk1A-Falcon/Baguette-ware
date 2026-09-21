@@ -6,4 +6,5 @@ func _on_quit_pressed() -> void:
 	
 
 func _on_menu_pressed() -> void:
+	GlobalGodough.stat_reset()
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

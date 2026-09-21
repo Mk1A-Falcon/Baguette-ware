@@ -1,13 +1,16 @@
 extends Node
 
+const default_played = 1
+const default_runs = 5 #what this does is sets a non-tangiable value so we can reset to this
+
 var baguettes_played = 1
 var runs_left = 5
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+#code was self-written though logic is from @godot_community
+func back_to_basics(): #subtle promotion but do #back-to-basics
+	baguettes_played = default_played
+	runs_left = default_runs
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+func stat_reset():
+	if baguettes_played >= 3 or runs_left == 0:
+		back_to_basics() #idt creating 2 functions was necessary tbh
