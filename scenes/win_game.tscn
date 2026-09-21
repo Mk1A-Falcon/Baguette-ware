@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cspfb346bnsye"]
+
+[ext_resource type="Texture2D" uid="uid://w1g86wlab6pr" path="res://assets/Untitled.png" id="1_8dvrg"]
+[ext_resource type="Script" uid="uid://nrj7f314rf60" path="res://scripts/win_game.gd" id="1_d6ige"]
+[ext_resource type="Texture2D" uid="uid://0ggdygq5arlg" path="res://assets/yippe_win scene.png" id="2_ooaim"]
+[ext_resource type="Texture2D" uid="uid://6mwf6ivf8sj1" path="res://assets/Screenshot 2026-09-21 153328.png" id="3_p6hhu"]
+[ext_resource type="Texture2D" uid="uid://ded2xccd5pybh" path="res://assets/bread_transparent.png" id="3_t6d1g"]
+[ext_resource type="Texture2D" uid="uid://csbouu4bg001v" path="res://assets/Screenshot 2026-09-21 153811.png" id="4_0xwny"]
+
+[node name="win_game" type="Node2D" unique_id=1240788658]
+script = ExtResource("1_d6ige")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1732088805]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_8dvrg")
+expand_mode = 1
+
+[node name="YippeWinScene" type="Sprite2D" parent="." unique_id=283580825]
+position = Vector2(207, 167)
+rotation = -0.08141512
+texture = ExtResource("2_ooaim")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1588916939]
+offset_left = 420.0
+offset_top = 119.0
+offset_right = 926.0
+offset_bottom = 267.0
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/normal_font_size = 108
+text = "YOU WIN!"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="quit" type="TextureButton" parent="." unique_id=1661510682]
+offset_left = 506.0
+offset_top = 458.0
+offset_right = 845.0
+offset_bottom = 630.0
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("3_p6hhu")
+
+[node name="menu" type="TextureButton" parent="." unique_id=1803425367]
+offset_left = 488.00003
+offset_top = 304.0
+offset_right = 827.00006
+offset_bottom = 476.0
+scale = Vector2(0.896001, 0.8)
+texture_normal = ExtResource("4_0xwny")
+
+[node name="BreadTransparent" type="Sprite2D" parent="." unique_id=642605774]
+position = Vector2(1042.25, 192.625)
+scale = Vector2(0.36875007, 0.4460938)
+texture = ExtResource("3_t6d1g")
+
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

@@ -14,7 +14,9 @@ offset_bottom = 648.0
 expand_mode = 1
 
 [node name="BreadTransparent" type="Sprite2D" parent="." unique_id=581843935]
-position = Vector2(249, 181)
+position = Vector2(277.00003, 187)
+rotation = 0.09598728
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_bqqt6")
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=2018570783]

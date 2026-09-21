@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cdtg6vmgssqwn"]
+
+[ext_resource type="Script" uid="uid://bkoatr5uem3ff" path="res://scripts/lose_game.gd" id="1_14mps"]
+[ext_resource type="Texture2D" uid="uid://w1g86wlab6pr" path="res://assets/Untitled.png" id="1_n2xvq"]
+[ext_resource type="Texture2D" uid="uid://ci3unplyiinl0" path="res://assets/IMG_5943.jpg" id="2_li31n"]
+[ext_resource type="Texture2D" uid="uid://csbouu4bg001v" path="res://assets/Screenshot 2026-09-21 153811.png" id="3_jipiw"]
+[ext_resource type="Texture2D" uid="uid://6mwf6ivf8sj1" path="res://assets/Screenshot 2026-09-21 153328.png" id="4_14mps"]
+
+[node name="lose_game" type="Node2D" unique_id=1803637558]
+script = ExtResource("1_14mps")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=750714324]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_n2xvq")
+expand_mode = 1
+
+[node name="Img5943" type="Sprite2D" parent="." unique_id=1106594090]
+position = Vector2(194.99998, 246)
+rotation = 0.28825548
+scale = Vector2(0.32485348, 0.34529108)
+texture = ExtResource("2_li31n")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1884312694]
+offset_left = 408.0
+offset_top = 99.0
+offset_right = 979.0
+offset_bottom = 252.0
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/normal_font_size = 89
+text = "YOU LOSE! :("
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="menu" type="TextureButton" parent="." unique_id=2119910055]
+offset_left = 488.00003
+offset_top = 304.0
+offset_right = 827.00006
+offset_bottom = 476.0
+scale = Vector2(0.896001, 0.8)
+texture_normal = ExtResource("3_jipiw")
+
+[node name="quit" type="TextureButton" parent="." unique_id=137888680]
+offset_left = 506.0
+offset_top = 458.0
+offset_right = 845.0
+offset_bottom = 630.0
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("4_14mps")
+
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

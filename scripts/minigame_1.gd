@@ -11,7 +11,7 @@ func _ready() -> void:
 	$baguette_pickup4.baguettes_connected.connect(baguettes_connected)
 	#had to watch a 10 min tutorial on how singals and stuff work btw
 	#cause the original guide doesnt connect it :(
-	await node_2d.TIMERWORKSBROTRUST(10.0)
+	await node_2d.TIMERWORKSBROTRUST(6.10)
 	timer_end = true
 
 func _process(_delta: float) -> void:

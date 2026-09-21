@@ -10,7 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if baguettes_pressed == 5:
 		if GlobalGodough.baguettes_played > 2:
-			get_tree().change_scene_to_file("res://scenes/baguette_win.tscn")
+			get_tree().change_scene_to_file("res://scenes/win_game.tscn")
 		else: 
 			get_tree().change_scene_to_file("res://scenes/level_scence.tscn")
 	

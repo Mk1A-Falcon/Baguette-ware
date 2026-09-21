@@ -8,19 +8,23 @@ extends Node2D
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
 
+
 var time
 func _ready() -> void:
-	await Timer(5.0)
 	
-	if GlobalGodough.baguettes_played < 2:
+	await Timer(5.0)
+	if GlobalGodough.baguettes_played < 3:
 		GlobalGodough.baguettes_played = GlobalGodough.baguettes_played + 1
 		get_tree().change_scene_to_file("res://scenes/minigame_" + str(GlobalGodough.baguettes_played) + ".tscn")
 	else:
-		get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
+		get_tree().change_scene_to_file("res://scenes/win_game.tscn")
+		
 
 func _process(_delta: float) -> void:
-	match GlobalGodough.runs_left: 
-
+	if GlobalGodough.runs_left == 0:
+		get_tree().change_scene_to_file("res://scenes/lose_game.tscn")
+	else: match GlobalGodough.runs_left: 
+	
 		4:
 			baguette_1.hide()
 		3:
